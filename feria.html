@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tríptico - Mi Granja</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.triptico {
+  width: 100%;
+  max-width: 1200px;
+  background: white;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.panel {
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel-izquierdo {
+  background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+  color: white;
+}
+
+.panel-central {
+  background: white;
+  border-left: 3px solid #4caf50;
+  border-right: 3px solid #4caf50;
+}
+
+.panel-derecho {
+  background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+  color: white;
+}
+
+.logo {
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 25px 0 15px 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid currentColor;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.95;
+  font-weight: 500;
+}
+
+.feature-box {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+  border-left: 4px solid rgba(255,255,255,0.5);
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.feature-icon {
+  font-size: 24px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.panel-central .feature-box {
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  border-left: 4px solid #4caf50;
+}
+
+.panel-central h2 {
+  color: #2e7d32;
+}
+
+.innovation-badge {
+  display: inline-block;
+  background: #ff9800;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  display: flex;
+  align-items: center;
+}
+
+.tech-list li:before {
+  content: "✓";
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.contact-info {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .triptico {
+    grid-template-columns: 1fr;
+  }
+  
+  .panel {
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: 3px solid #4caf50;
+  }
+  
+  .panel-derecho {
+    border-bottom: none;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .triptico {
+    max-width: 100%;
+    box-shadow: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="triptico">
+  <!-- Panel Izquierdo -->
+  <div class="panel panel-izquierdo">
+    <div class="logo">🌾</div>
+    <h1>MI GRANJA</h1>
+    <p class="subtitle">Sistema Inteligente de Control y Monitoreo IoT</p>
+    
+    <div class="feature-box">
+      <h3>🎯 ¿Qué es Mi Granja?</h3>
+      <p>Sistema automatizado que revoluciona la gestión agrícola mediante tecnología IoT, permitiendo el control remoto y monitoreo en tiempo real de variables críticas en tu granja.</p>
+    </div>
+    
+    <h2>💡 Innovaciones Destacadas</h2>
+    
+    <div class="feature-item">
+      <span class="feature-icon">🤖</span>
+      <div class="feature-text">
+        <strong>Control Inteligente con IA</strong>
+        <p>Algoritmos adaptativos que aprenden y optimizan automáticamente el consumo energético y recursos.</p>
+      </div>
+    </div>
+    
+    <div class="feature-item">
+      <span class="feature-icon">🔄</span>
+      <div class="feature-text">
+        <strong>Sistema de Histéresis</strong>
+        <p>Control inteligente de bomba que evita ciclos innecesarios, prolongando vida útil del equipo.</p>
+      </div>
+    </div>
+    
+    <div class="feature-item">
+      <span class="feature-icon">⚡</span>
+      <div class="feature-text">
+        <strong>PWM Dinámico</strong>
+        <p>Regulación progresiva de temperatura mediante control PWM, reduciendo consumo hasta 70%.</p>
+      </div>
+    </div>
+    
+    <div class="feature-item">
+      <span class="feature-icon">📱</span>
+      <div class="feature-text">
+        <strong>Alertas Instantáneas</strong>
+        <p>Notificaciones Telegram en tiempo real para eventos críticos desde cualquier lugar del mundo.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel Central -->
+  <div class="panel panel-central">
+    <h2>🚀 Características Principales</h2>
+    
+    <div class="feature-box">
+      <h3>🌡️ Monitoreo Ambiental</h3>
+      <div class="feature-item">
+        <span class="feature-icon">📊</span>
+        <div class="feature-text">
+          <strong>Sensor DHT22</strong>
+          <p>Medición precisa de temperatura y humedad con precisión profesional.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🎯</span>
+        <div class="feature-text">
+          <strong>Control Automático</strong>
+          <p>Ajuste automático de calefacción según rangos de temperatura óptimos (20°C - 28°C).</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="feature-box">
+      <h3>💧 Gestión de Recursos</h3>
+      <div class="feature-item">
+        <span class="feature-icon">📏</span>
+        <div class="feature-text">
+          <strong>Sensores Ultrasónicos</strong>
+          <p>Medición continua y precisa de niveles de agua y alimento sin contacto.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">⚙️</span>
+        <div class="feature-text">
+          <strong>Automatización Total</strong>
+          <p>Bomba de agua con activación automática al detectar niveles críticos (<30%).</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="feature-box">
+      <h3>☁️ Conectividad Cloud</h3>
+      <div class="feature-item">
+        <span class="feature-icon">🔥</span>
+        <div class="feature-text">
+          <strong>Firebase Realtime</strong>
+          <p>Sincronización instantánea de datos con base de datos en la nube.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🌐</span>
+        <div class="feature-text">
+          <strong>Acceso Remoto</strong>
+          <p>Consulta y control desde cualquier dispositivo con conexión a internet.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="feature-box">
+      <h3>🛡️ Seguridad y Confiabilidad</h3>
+      <div class="feature-item">
+        <span class="feature-icon">💾</span>
+        <div class="feature-text">
+          <strong>Configuración Persistente</strong>
+          <p>Credenciales almacenadas en EEPROM con checksum de validación.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <span class="feature-icon">🔐</span>
+        <div class="feature-text">
+          <strong>Portal Captivo</strong>
+          <p>Configuración WiFi inicial segura mediante interfaz web intuitiva.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel Derecho -->
+  <div class="panel panel-derecho">
+    <h2>⚙️ Tecnología Implementada</h2>
+    
+    <ul class="tech-list">
+      <li>ESP32 (WiFi + Bluetooth)</li>
+      <li>Sensor DHT22 de precisión</li>
+      <li>Sensores Ultrasónicos HC-SR04</li>
+      <li>Control PWM para eficiencia</li>
+      <li>Firebase Realtime Database</li>
+      <li>Telegram Bot API</li>
+      <li>WebServer embebido</li>
+    </ul>
+    
+    <h2>✨ Beneficios Clave</h2>
+    
+    <div class="feature-item">
+      <span class="feature-icon">💰</span>
+      <div class="feature-text">
+        <strong>Ahorro Energético</strong>
+        <p>Reducción significativa en consumo eléctrico mediante control inteligente.</p>
+      </div>
+    </div>
+    
+    <div class="feature-item">
+      <span class="feature-icon">⏱️</span>
+      <div class="feature-text">
+        <strong>Ahorro de Tiempo</strong>
+        <p>Automatización completa elimina necesidad de supervisión manual constante.</p>
+      </div>
+    </div>
+    
+    <div class="feature-item">
+      <span class="feature-icon">📈</span>
+      <div class="feature-text">
+        <strong>Optimización</strong>
+        <p>Condiciones ambientales óptimas mejoran productividad y bienestar animal.</p>
+      </div>
+    </div>
+    
+    <div class="feature-item">
+      <span class="feature-icon">🔔</span>
+      <div class="feature-text">
+        <strong>Prevención</strong>
+        <p>Alertas tempranas evitan situaciones críticas y pérdidas económicas.</p>
+      </div>
+    </div>
+    
+    <div class="feature-item">
+      <span class="feature-icon">📊</span>
+      <div class="feature-text">
+        <strong>Datos Históricos</strong>
+        <p>Análisis de tendencias para toma de decisiones informadas.</p>
+      </div>
+    </div>
+    
+    <h2>🎓 Aplicaciones</h2>
+    
+    <div class="feature-box">
+      <p><strong>🐔 Granjas Avícolas:</strong> Control ambiental para pollos y aves de corral.</p>
+      <p><strong>🐷 Porcicultura:</strong> Gestión de temperatura y agua en cocheras.</p>
+      <p><strong>🌱 Invernaderos:</strong> Monitoreo de condiciones para cultivos protegidos.</p>
+      <p><strong>🐰 Pequeñas Especies:</strong> Control para conejos, cuyes y otros animales.</p>
+    </div>
+    
+    <div class="contact-info">
+      <h3>🌾 Mi Granja IoT</h3>
+      <p><strong>Sistema de Control Inteligente</strong></p>
+      <p>Tecnología al servicio de la agricultura</p>
+      <p style="margin-top: 15px; font-size: 12px; opacity: 0.8;">© 2025 - Innovación Agrícola</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
